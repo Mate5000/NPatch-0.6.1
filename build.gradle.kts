@@ -5,6 +5,16 @@ import org.eclipse.jgit.api.Git
 import org.eclipse.jgit.internal.storage.file.FileRepository
 import org.eclipse.jgit.storage.file.FileRepositoryBuilder
 
+java {
+    toolchain {
+        languageVersion.set(JavaLanguageVersion.of(17)) // vagy 21
+    }
+}
+kotlin {
+    jvmToolchain(17) 
+}
+
+
 plugins {
     alias(libs.plugins.agp.lib) apply false
     alias(libs.plugins.agp.app) apply false
